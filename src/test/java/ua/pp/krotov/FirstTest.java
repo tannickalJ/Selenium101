@@ -26,18 +26,6 @@ public class FirstTest {
 	//private String name;
 
 
-//	private void getName() throws ParserConfigurationException, IOException, SAXException {
-////		Scanner scanner = new Scanner(System.in);
-////		System.out.println("Enter the name to be registered: ");
-////		name = scanner.nextLine();
-//
-//		File file = new File("pom.xml");
-//		DocumentBuilderFactory doc = DocumentBuilderFactory.newInstance();
-//		DocumentBuilder documentBuilder = doc.newDocumentBuilder();
-//		Document document = documentBuilder.parse(file);
-//		String user = document.getElementsByTagName("names").item(0).getTextContent();
-//		name = user;
-//	}
 
 	@BeforeClass // Runs this method before the first test method is run
 	public void launch() {
