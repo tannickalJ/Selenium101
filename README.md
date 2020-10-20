@@ -1,15 +1,23 @@
-#### Video
-* Install Java and Maven  - http://www.youtube.com/watch?v=cFK0hZpJEHY
-* Run autotests with Selenium WebDriver + Maven + TestNG + Eclipse - https://www.youtube.com/watch?v=eHqrhY_VlX4
-* Run autotests with Selenium WebDriver + Maven + TestNG + IntelliJ IDEA - https://www.youtube.com/watch?v=rQG_GBTFWQ4
+#### ICANJ Website Registration Test
+This project tests the "my.icanj.org" website by:
+* Logging onto the website
+* Clicking on the "Covid-19 Service Registration" link
+* Registering you or someone else for the service for the coming Sunday
+* Reserving your seat
+* Logging out and terminating the browser
 
-#### Links
-* JDK - http://www.oracle.com/technetwork/java/javase/downloads/index.html
-* Maven - https://maven.apache.org/download.cgi
-* Eclipse - https://eclipse.org/downloads/
-* IntelliJ IDEA - https://www.jetbrains.com/idea/download/
+#### How To Use
+* Go to the TestNG.xml file
+* In the corresponding parameter tags, enter your valid email and password
+* For "user_name", enter your email
+```
+ <parameter name="user_name" value="abc@gmail.com"/>
+        <parameter name="pass_word" value="abc1234"/>
+```
+* Run the FirstTest.java program
 
-#### Create new maven project
-```
-mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DgroupId=ua.pp.krotov -DartifactId=FirstWebDriverTest  -DinteractiveMode=false
-```
+#### Expectations
+* When the credentials have been verified, program will run as intended and browser terminates after logout
+* If incorrect credentials, browser will not terminate and return 2 exceptions
+* NoSuchElementException will show due to certain web elements expected to be accessed but failed due to incorrect credentials
+

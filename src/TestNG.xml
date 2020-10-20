@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Icanj_website_tests">
+    <test name="icanjRegistration_registerUser_validCredentials">
+        <parameter name="user_name" value="abc@gmail.com"/>
+        <parameter name="pass_word" value="abc1234"/>
+        <classes>
+            <class name="com.tannickalJ.FirstTest"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
