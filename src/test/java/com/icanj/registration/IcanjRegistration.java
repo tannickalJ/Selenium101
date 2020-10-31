@@ -1,4 +1,4 @@
-package com.tannickalJ;
+package com.icanj.registration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,18 +10,18 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class FirstTest {
+public class IcanjRegistration {
     private WebDriver driver;
 
     @Parameters({"user_name", "pass_word"})
     @BeforeTest
-    public void launch() {
+    public void launch(String userName, String password) {
         // Create a new instance of the Chrome driver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Owner\\Documents\\selenium\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/jason/Downloads/chromedriver");
         driver = new ChromeDriver();
         driver.get("http://my.icanj.org/");
-        driver.findElement(By.id("j_username")).sendKeys("user_name");
-        driver.findElement(By.id("j_password")).sendKeys("pass_word");
+        driver.findElement(By.id("j_username")).sendKeys(userName);
+        driver.findElement(By.id("j_password")).sendKeys(password);
         driver.findElement(By.xpath("//button[contains(text(),'Sign in')]")).click();
     }
 
